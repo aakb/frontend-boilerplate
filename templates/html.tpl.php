@@ -52,6 +52,14 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
+<!-- Debug: Remove this in production -->
+<section class="debug">
+  <h3>Debug</h3>
+  <div class="breakpoint-1">1st breakpoint active</div>
+  <div class="breakpoint-2">2nd breakpoint active</div>
+  <div class="breakpoint-3">3rd breakpoint active</div>
+</section>
+<!-- / Debug -->
 <body class="html-tpl <?php print $classes; ?>">
   <?php print $page_top; ?>
   <?php print $page; ?>
