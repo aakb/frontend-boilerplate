@@ -10,7 +10,8 @@
    ================================================================================================================== */
 
 $border-radius:    .6em !default;
-
+$border-width:      1px !default;
+$inline-block-fix:     -4px;
 
 
 /* Colors
@@ -18,6 +19,14 @@ $border-radius:    .6em !default;
 
 $black:            #000 !default;
 $white:            #fff !default;
+
+$gray-lightest:       lighten($black, 98%);
+$gray-lighter:        lighten($black, 90%);
+$gray-light:          lighten($black, 80%);
+$gray:                lighten($black, 70%);
+$gray-dark:           lighten($black, 45%);
+$gray-darker:         lighten($black, 35%);
+$gray-darkest:        lighten($black, 25%);
 
 
 
