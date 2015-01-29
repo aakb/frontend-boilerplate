@@ -30,6 +30,7 @@
 /* Imports, placeholder classes, mixins and variables related to this document
    ========================================================================== */
 /* Variables used within this document. */
+/* Menu positioning */
 @-moz-keyframes toggle-nav-open {
   0% {
     right: -20em; }
