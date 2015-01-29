@@ -2,12 +2,12 @@
  *
  * Itk tabs
  *
- * A component for displaying tabs as rounded corners.
+ * A component for displaying an expanding side menu.
  *
  */
 
 
-/* Imports, placeholder classes, mixins and variables related to this document
+/* Imports, placeholder classes, mixins and variables related to this document.
    ========================================================================== */
 
 /* Variables used within this document. */
@@ -31,6 +31,9 @@ $itk--menu-position-inverted:     auto;   // Inverted variable must be defined.
   $itk--menu-position-inverted: right;
 }
 
+
+/* Animations related to this document.
+   ========================================================================== */
 
 // Navigation animations.
 @include keyframes(toggle-nav-open) {
@@ -62,6 +65,7 @@ $itk--menu-position-inverted:     auto;   // Inverted variable must be defined.
     background-color: transparentize($itk--menu-overlay-color, $itk--menu-overlay-transparency);
   }
 }
+
 
 /* Styles
    ========================================================================== */

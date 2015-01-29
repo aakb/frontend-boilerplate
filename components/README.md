@@ -13,7 +13,7 @@ Components
 -------------
 1. ITK tabs
 2. ITK menu
-
+  
 
 
 ITK tabs
@@ -25,8 +25,6 @@ Provides styles for displaying tabs with rounded corners.
 **Tabs wrapper**: is-full-width (Requires a tabs count attribute. -  The static number of tabs inside wrapper)
 
 **Tabs** : is-active
-
-
 
 
 
