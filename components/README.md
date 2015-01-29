@@ -13,6 +13,6 @@ ITK tabs
 
 ###State classes:###
 
-**Tabs wrapper**: is-full-width (Requires a tabs count attribute. -  A static number of tabs inside wrapper)
+**Tabs wrapper**: is-full-width (Requires a tabs count attribute. -  The static number of tabs inside wrapper)
 
 **Tabs** : is-active
