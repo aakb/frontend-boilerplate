@@ -19,10 +19,10 @@ Components
 
 ITK tabs
 --------
-###Description:###
+####Description:####
 Provides styles for displaying tabs with rounded corners.
 
-###State classes:###
+####State classes:####
 **Tabs wrapper**: is-full-width (Requires a tabs count attribute. -  The static number of tabs inside wrapper)
 
 **Tabs** : is-active
@@ -32,12 +32,12 @@ Provides styles for displaying tabs with rounded corners.
 
 ITK menu
 --------
-###Description:###
+####Description:####
 Requires IE 10 (Uses CSS animations.)
 
 Provides styles for an animated side menu. An example javascript (jquery) file is provided which adds and removes the state classes used.
 
-###State classes:###
+####State classes:####
 **HTML and body tags**: is-locked (Locking the content in place - disables scrolling)
 
 **Menu**: is-visible, is-hidden
