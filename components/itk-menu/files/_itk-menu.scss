@@ -1,0 +1,111 @@
+/**
+ *
+ * Itk tabs
+ *
+ * A component for displaying tabs as rounded corners.
+ *
+ */
+
+
+/* Imports, placeholder classes, mixins and variables related to this document
+   ========================================================================== */
+
+/* Variables used within this document. */
+$itk--menu-width:                 20em;
+$itk--menu-background:            $black;
+$itk--menu-color:                 $white;
+$itk--menu-animation-speed:       .75s;
+$itk--menu-overlay-color:         $black;
+$itk--menu-overlay-transparency:  .35;
+$itk--menu-shadow-color:          $black;
+
+
+
+  // Navigation animations.
+@include keyframes(toggle-nav-open) {
+  0% {
+    right: -$itk--menu-width;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@include keyframes(toggle-nav-close) {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -$itk--menu-width;
+  }
+}
+
+@include keyframes(toggle-nav-overlay) {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparentize($itk--menu-overlay-color, $itk--menu-overlay-transparency);
+  }
+}
+
+/* Styles
+   ========================================================================== */
+
+%itk--menu {
+  color: $itk--menu-color;
+  height: 100%; // Menu should go from top to bottom.
+  overflow-y: auto; // We want a menu scroll when expanding beyond page.
+  position: fixed;
+  right: -$itk--menu-width;
+  z-index: 99;  // On top of everything else.
+
+  max-width: 90%; // To avoid breaking width on narrow devices.
+  width: $itk--menu-width;
+
+  background: $itk--menu-background;
+
+  @include box-sizing(border-box);
+  @include box-shadow(-5px 0px 10px transparentize($black, .75)); // Using a fairly static shadow.
+
+
+  /* States */
+
+  &.is-visible {
+    @include animation(toggle-nav-open $itk--menu-animation-speed ease 1 forwards);
+  }
+
+  &.is-hidden {
+    @include animation(toggle-nav-close $itk--menu-animation-speed ease 1 forwards);
+  }
+}
+
+
+/* Invisible close element that allows the user to close the menu by clicking outside it */
+%itk--menu-nav-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;  // Just below menu.
+
+  cursor: pointer;
+
+  &.is-visible {
+    width: 100%;
+
+    @include animation(toggle-nav-overlay .75s linear 1 forwards);
+  }
+}
+
+
+/* Make sure the user can't scroll when overlays are active */
+html.is-locked,
+html.is-locked  body {
+  overflow: hidden;
+
+  height: 100%;
+}

@@ -11,8 +11,8 @@
 @import "../../../sass/base/_vars";
 @import "../../../sass/base/_mixins";
 
-// Import the componen sass file.
-@import "../sass/_itk-tabs";
+// Import the component sass file.
+@import "../files/_itk-tabs";
 
 .example--tabs-one {
   @extend %itk--tabs;
