@@ -1,5 +1,5 @@
 ITK components
-==================
+==============
 
 Configuration
 -------------
@@ -10,7 +10,7 @@ Configuration
 
 
 Components
--------------
+-----------
 1. ITK tabs
 2. ITK menu
 
@@ -29,7 +29,7 @@ Provides styles for displaying tabs with rounded corners.
 
 
 
-  
+
 ITK menu
 --------
 ###Description:###
