@@ -10,7 +10,7 @@ Configuration
 
 ITK tabs
 --------
-State classes:
+##State classes:##
 
 **Tabs wrapper**: is-full-width (Requires a tabs count attribute. -  A static number of tabs inside wrapper)
 
