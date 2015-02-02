@@ -19,10 +19,11 @@ $itk--menu-overlay-color:         $black; // Color of overlay.
 $itk--menu-overlay-transparency:  .35;    // Transparency of the overlay.
 $itk--menu-shadow-color:          $black; // The shadow color on the edge of the menu.
 
-$itk--menu-position:              right;  // Positions the menu let or right.
+$itk--menu-position:              right;  // Positions the menu left or right.
+$itk--menu-position-type:         fixed;  // Fixed or absolute depending on the general layout of the site and the use of the menu.
 
 /* Menu positioning */
-$itk--menu-position-inverted:     auto;   // Inverted variable must be defined.
+$itk--menu-position-inverted:     auto;   // Inverted variable must be defined, but is altered below.
 
 // If menu position switches, also switch the inverted positioning.
 @if $itk--menu-position == "right" {
@@ -74,7 +75,7 @@ $itk--menu-position-inverted:     auto;   // Inverted variable must be defined.
   color: $itk--menu-color;
   height: 100%; // Menu should go from top to bottom.
   overflow-y: auto; // We want a menu scroll when expanding beyond page.
-  position: fixed;
+  position: $itk--menu-position-type;
   #{$itk--menu-position}: -$itk--menu-width;
   z-index: 99;  // On top of everything else.
 
