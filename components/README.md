@@ -48,14 +48,10 @@ Provides styles for an animated side menu. An example javascript (jquery) file i
 
 
 
-ITK menu
+ITK messages
 --------
 ####Description:####
 Provides styles for messages.
 
 ####State classes:####
-**HTML and body tags**: is-locked (Locking the content in place - disables scrolling)
-
-**Menu**: is-visible, is-hidden
-
-**Overlay link** : is-visible
+**Message style**: is-info, is-warning, is-error
