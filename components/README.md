@@ -13,6 +13,7 @@ Components
 -----------
 1. ITK tabs
 2. ITK menu
+3. ITK messages
 
 
 
@@ -36,6 +37,21 @@ ITK menu
 Requires IE 10 (Uses CSS animations.)
 
 Provides styles for an animated side menu. An example javascript (jquery) file is provided which adds and removes the state classes used.
+
+####State classes:####
+**HTML and body tags**: is-locked (Locking the content in place - disables scrolling)
+
+**Menu**: is-visible, is-hidden
+
+**Overlay link** : is-visible
+
+
+
+
+ITK menu
+--------
+####Description:####
+Provides styles for messages.
 
 ####State classes:####
 **HTML and body tags**: is-locked (Locking the content in place - disables scrolling)

@@ -8,12 +8,15 @@
 
 // Import dependencies.
 @import "compass/css3";
-@import "../../../sass/base/_vars";
-@import "../../../sass/base/_mixins";
 
 // Import the component sass file.
-@import "../files/_itk-messages";
+@import "../../../components/itk-messages/files/_itk-messages";
+
 
 .example-message {
-  @extend %itk--message;
+  @extend .itk-message;
+
+  &--inner {
+    @extend .itk-message--inner;
+  }
 }
