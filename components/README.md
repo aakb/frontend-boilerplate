@@ -13,6 +13,7 @@ Components
 -----------
 1. ITK tabs
 2. ITK menu
+3. ITK messages
 
 
 
@@ -43,3 +44,14 @@ Provides styles for an animated side menu. An example javascript (jquery) file i
 **Menu**: is-visible, is-hidden
 
 **Overlay link** : is-visible
+
+
+
+
+ITK messages
+--------
+####Description:####
+Provides styles for messages.
+
+####State classes:####
+**Message style**: is-info, is-warning, is-error
