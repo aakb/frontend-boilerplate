@@ -1,0 +1,46 @@
+/**
+ *
+ * ITK box list
+ *
+ * A component for content boxes
+ *
+ */
+
+
+/* Variables
+   ========================================================================== */
+
+$boxlist-font-color:                    #000;
+$boxlist-border-color:                  #ccc;
+$boxlist-padding:                       1em;
+
+
+
+/* Styles
+   ========================================================================== */
+
+.itk-boxlist {
+  margin-bottom: 2em;
+
+  &--item {
+    border-bottom: 1px solid $boxlist-border-color;
+    padding-top: $boxlist-padding;
+    padding-bottom: $boxlist-padding;
+  }
+
+  &--header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &--type,
+  &--date,
+  &--time,
+  &--location {
+    color: transparentize($boxlist-font-color, .5)
+  }
+
+  &--location {
+    display: block;
+  }
+}
