@@ -19,13 +19,86 @@ $boxlist-padding:                       1em;
 /* Styles
    ========================================================================== */
 
+.itk-boxlist.is-double-column {
+  @media only screen and (min-width: 60em) {
+    @include display-flex;
+    @include flex-flow(row nowrap);
+    @include justify-content(space-between);
+
+    .itk-boxlist--item {
+      margin-right: 1em;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .itk-boxlist {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 
   &--item {
+    @include display-flex;
+    @include flex-flow(row nowrap);
+
     border-bottom: 1px solid $boxlist-border-color;
+    margin-bottom: 1em;
     padding-top: $boxlist-padding;
     padding-bottom: $boxlist-padding;
+
+    // Hide figure as default
+    figure {
+      display: none;
+    }
+
+    @media only screen and (min-width: 30em) {
+      border: 1px solid $boxlist-border-color;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      header {
+        order: 2;
+
+        padding: $boxlist-padding;
+
+        @include flex-grow(1);
+        @include flex-shrink(1);
+      }
+
+      figure {
+        order: 1;
+
+        display: block;
+        height: 200px;
+
+        @include flex-basis(200px);
+        @include flex-grow(0);
+      }
+    }
+  }
+
+  // Handle display of metadata
+  &--metadata {
+    @include display-flex;
+    @include flex-flow(row nowrap);
+    @include justify-content(space-between);
+
+    span {
+      padding: .25em;
+      width: 30%;
+
+      background: tomato;
+      font-size: 85%;
+      text-align: center;
+
+      @include box-sizing(border-box);
+
+      @media only screen and (min-width: 30em) {
+        padding: .5em;
+      }
+    }
   }
 
   &--header {
