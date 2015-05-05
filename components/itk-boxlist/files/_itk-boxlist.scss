@@ -16,25 +16,8 @@ $boxlist-padding:                       1em;
 
 
 
-/* Styles
+/* Basic styling
    ========================================================================== */
-
-.itk-boxlist.is-double-column {
-  @media only screen and (min-width: 60em) {
-    @include display-flex;
-    @include flex-flow(row nowrap);
-    @include justify-content(space-between);
-
-    .itk-boxlist--item {
-      margin-right: 1em;
-      margin-bottom: 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
 
 .itk-boxlist {
   margin-bottom: 1em;
@@ -79,26 +62,10 @@ $boxlist-padding:                       1em;
     }
   }
 
-  // Handle display of metadata
   &--metadata {
     @include display-flex;
     @include flex-flow(row nowrap);
     @include justify-content(space-between);
-
-    span {
-      padding: .25em;
-      width: 30%;
-
-      background: tomato;
-      font-size: 85%;
-      text-align: center;
-
-      @include box-sizing(border-box);
-
-      @media only screen and (min-width: 30em) {
-        padding: .5em;
-      }
-    }
   }
 
   &--header {
@@ -110,10 +77,46 @@ $boxlist-padding:                       1em;
   &--date,
   &--time,
   &--location {
-    color: transparentize($boxlist-font-color, .5)
+    color: transparentize($boxlist-font-color, .5);
   }
 
+  &--date,
+  &--time,
   &--location {
-    display: block;
+    padding: .25em;
+    width: 30%;
+
+    background: tomato;
+    font-size: 85%;
+    text-align: center;
+
+    @include box-sizing(border-box);
+
+    @media only screen and (min-width: 30em) {
+      padding: .5em;
+    }
+  }
+}
+
+
+/* Variants
+   ========================================================================== */
+
+// Show 2 columns side by side
+.itk-boxlist.is-side-by-side {
+  // Stack until there is enough space to display them side by side
+  @media only screen and (min-width: 60em) {
+    @include display-flex;
+    @include flex-flow(row nowrap);
+    @include justify-content(space-between);
+
+    .itk-boxlist--item {
+      margin-right: 1em;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
