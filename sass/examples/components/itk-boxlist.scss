@@ -8,6 +8,7 @@
 
 // Import dependencies.
 @import "compass/css3";
+@import "base/_normalize";
 
 // Import the component sass file.
 @import "../../../components/itk-boxlist/files/_itk-boxlist";
